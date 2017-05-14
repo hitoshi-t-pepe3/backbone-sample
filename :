@@ -1,0 +1,15 @@
+(function($){
+    $(document).ready(function(){
+        // start application code goes here
+        var InvoiceItemModel = Backbone.Model.extend({
+            defaults: {
+                price: 0,
+                quantity: 0
+            },
+
+            calculateAmount: function() {
+                return this.get('price') * this.get('quantity');
+            }
+        });
+    });
+})(jQuery);
